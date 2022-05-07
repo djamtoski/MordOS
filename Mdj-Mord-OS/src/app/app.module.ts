@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './authentication/login/login.component';
+import { LoginComponent } from './authentication/login';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { LoginComponent } from './authentication/login/login.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
