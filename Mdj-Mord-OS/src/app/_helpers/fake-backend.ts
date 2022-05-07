@@ -26,7 +26,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
                 default:
                     // pass through any requests not handled above
                     return next.handle(request);
-            }    
+            }
         }
 
         // route functions
@@ -51,11 +51,11 @@ export class FakeBackendInterceptor implements HttpInterceptor {
 
         // helper functions
 
-        function ok(body?) {
+        function ok(body : any) {
             return of(new HttpResponse({ status: 200, body }))
         }
 
-        function error(message) {
+        function error(message : string) {
             return throwError({ error: { message } });
         }
 
