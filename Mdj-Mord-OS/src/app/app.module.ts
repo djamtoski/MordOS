@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './authentication/login';
 import { HomeModule } from './home/home.module';
+import { fakeBackendProvider } from './_helpers';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { HomeModule } from './home/home.module';
     HomeModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    fakeBackendProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
