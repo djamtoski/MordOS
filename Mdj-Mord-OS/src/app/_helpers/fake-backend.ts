@@ -1,9 +1,9 @@
-import { Injectable } from '@angular/core';
+﻿import { Injectable } from '@angular/core';
 import { HttpRequest, HttpResponse, HttpHandler, HttpEvent, HttpInterceptor, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
 import { delay, mergeMap, materialize, dematerialize } from 'rxjs/operators';
 
-let users = [{ id: 1, firstName: 'Jason', lastName: 'Watmore', username: 'test', password: 'test' }];
+const users = [{ id: 1, username: 'test', password: 'test', firstName: 'Test', lastName: 'User' }];
 
 @Injectable()
 export class FakeBackendInterceptor implements HttpInterceptor {
@@ -21,10 +21,12 @@ export class FakeBackendInterceptor implements HttpInterceptor {
             switch (true) {
                 case url.endsWith('/users/authenticate') && method === 'POST':
                     return authenticate();
+                case url.endsWith('/users') && method === 'GET':
+                    return getUsers();
                 default:
                     // pass through any requests not handled above
                     return next.handle(request);
-            }
+            }    
         }
 
         // route functions
@@ -42,19 +44,32 @@ export class FakeBackendInterceptor implements HttpInterceptor {
             })
         }
 
+        function getUsers() {
+            if (!isLoggedIn()) return unauthorized();
+            return ok(users);
+        }
+
         // helper functions
 
-        function ok(body? : any) {
+        function ok(body?) {
             return of(new HttpResponse({ status: 200, body }))
         }
 
-        function error(message : string) {
+        function error(message) {
             return throwError({ error: { message } });
+        }
+
+        function unauthorized() {
+            return throwError({ status: 401, error: { message: 'Unauthorised' } });
+        }
+
+        function isLoggedIn() {
+            return headers.get('Authorization') === 'Bearer fake-jwt-token';
         }
     }
 }
 
-export const fakeBackendProvider = {
+export let fakeBackendProvider = {
     // use fake backend in place of Http service for backend-less development
     provide: HTTP_INTERCEPTORS,
     useClass: FakeBackendInterceptor,
