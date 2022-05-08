@@ -1,0 +1,18 @@
+@use 'sass:math';
+@import '../settings/global-variables';
+
+.#{$prefix}-input {
+  padding: math.div($base-elements-padding, 2);
+  border-radius: $border-radius-primary;
+  border: 1px solid transparent;
+  background: $gray;
+  color: darken($gray, 50%);
+
+  &::placeholder {
+    color: darken($gray, 20%);
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+}

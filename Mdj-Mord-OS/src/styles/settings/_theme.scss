@@ -1,0 +1,13 @@
+@import './colors';
+
+:root {
+  --body-background-primary: #{$white};
+  --body-background-secondary: #{$gray};
+  --body-color: #{$black};
+  --highlight-color: #{$black};
+}
+
+body {
+  background-color: var(--body-background-primary);
+  color: var(--body-color);
+}

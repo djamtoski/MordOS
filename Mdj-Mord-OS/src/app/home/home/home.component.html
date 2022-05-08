@@ -1,1 +1,7 @@
-<p>home works!</p>
+<button class="os-logout" (click)="logout()">🛑</button>
+<nav class="navMenu" style="display : inline-flex;">
+  <div *ngFor="let item of rootItems | async">
+    <os-icon [data]="item"></os-icon>
+  </div>
+  <div class="dot"></div>
+</nav>

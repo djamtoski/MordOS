@@ -1,0 +1,32 @@
+@import '../../../styles/settings/global-variables';
+
+.os-icon {
+  width: 5rem;
+  padding: 1rem;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__emoji {
+    width: 3rem;
+    height: 3rem;
+    font-size: 2.4rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+  }
+
+  &__content {
+    width: 100%;
+    text-align: center;
+  }
+
+  &__name {
+    display: block;
+    max-width: 100%;
+    font-size: 0.7rem;
+    border-radius: 3px;
+    color: white;
+    padding: 0.3rem;
+  }
+}

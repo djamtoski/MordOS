@@ -1,0 +1,13 @@
+<div class="os-icon">
+  <div class="os-icon__emoji" (dblclick)="open()">
+    {{ icon }}
+  </div>
+  <div class="os-icon__content" (dblclick)="rename()">
+    <ng-container *ngIf="renaming; else name">
+      <input #input type="text" [value]="data.name" autofocus (blur)="save($event)" (keyup)="onKeyUp($event)" />
+    </ng-container>
+    <ng-template #name>
+      <span class="os-icon__name">{{ data.name }}</span>
+    </ng-template>
+  </div>
+</div>

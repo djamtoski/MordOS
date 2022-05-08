@@ -1,0 +1,29 @@
+@use 'sass:math';
+@import '../settings/global-variables';
+
+.#{$prefix}-btn {
+  padding: math.div($base-elements-padding, 2);
+  border-radius: $border-radius-primary;
+  color: $black;
+  background: transparent;
+
+  & + & {
+    margin-left: 0.5rem;
+  }
+
+  cursor: pointer;
+
+  &-primary {
+    @include button-variant($black, $white, $border-black-1);
+  }
+
+  &-secondary {
+    @include button-variant($black, $white, $white);
+  }
+
+  &-circle {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+  }
+}

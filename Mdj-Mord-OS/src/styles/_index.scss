@@ -1,0 +1,43 @@
+/**
+ *
+ * SETTINGS
+ * ..................... Variable configurations for things like colors, fonts, sizes, etc…
+ *
+ *
+ * TOOLS
+ * ..................... Globally used mixins and functions.
+ *
+ *
+ * GENERIC
+ * ..................... CSS resets and normalizing rules to create a foundation for your styles.
+ *
+ *
+ * ELEMENTS
+ * ..................... Style rules for bare HTML elements (like h1 or button).
+ *
+ *
+ * OBJECTS
+ * ..................... Style rules for elements responsible for layout or structuring.
+ *
+ *
+ * COMPONENTS
+ * ..................... Style rules for UI components.
+ *
+ *
+ * UTILITIES
+ * ..................... Helper or utility classes with ability to override anything which goes before in the triangle.
+ */
+
+@import './settings/colors';
+@import './settings/global-variables';
+@import './settings/theme';
+@import './tools/mixins';
+// @import './generic/*';
+@import './elements/button';
+@import './elements/elements';
+@import './elements/input';
+@import './elements/type';
+// @import './objects/*';
+// @import './components/*';
+@import './utilities/spacing';
+@import './utilities/text';
