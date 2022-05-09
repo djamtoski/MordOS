@@ -1,1 +1,4 @@
-<p>my-photos works!</p>
+<div class="mo-my-photos">
+  <os-icon *ngFor="let item of photos | async" [data]="item" [display]="parent"></os-icon>
+  <div *ngIf="!(photos | async)?.length" class="m-1 text-italic">Photos is empty</div>
+</div>

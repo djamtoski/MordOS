@@ -1,10 +1,10 @@
 <ng-container [ngSwitch]="data?.type">
-  <!-- <mo-folder *ngSwitchCase="'folder'" [data]="data" [parent]="parent"></mo-folder>
-  <mo-txt *ngSwitchCase="'txt'" [data]="data" [parent]="parent"></mo-txt> -->
+  <!-- <mo-txt *ngSwitchCase="'txt'" [data]="data" [parent]="parent"></mo-txt> -->
   <os-web-browser *ngSwitchCase="'browser'"></os-web-browser>
-  <!-- <mo-news *ngSwitchCase="'news'"></mo-news> -->
-  <!-- <mo-camera *ngSwitchCase="'camera'" [parent]="parent"></mo-camera>
-  <mo-my-photos *ngSwitchCase="'myPhotos'" [data]="data" [parent]="parent"></mo-my-photos>
+  <os-newspaper *ngSwitchCase="'news'"></os-newspaper>
+  <os-folder-app *ngSwitchCase="'folder'" [data]="data" [parent]="parent"></os-folder-app>
+  <!-- <mo-my-photos *ngSwitchCase="'myPhotos'" [data]="data" [parent]="parent"></mo-my-photos>
   <mo-photo *ngSwitchCase="'photo'" [data]="data" [parent]="parent"></mo-photo> -->
+  <os-selfie-camera *ngSwitchCase="'camera'" [parent]="parent"></os-selfie-camera>
   <div *ngSwitchDefault>Default</div>
 </ng-container>

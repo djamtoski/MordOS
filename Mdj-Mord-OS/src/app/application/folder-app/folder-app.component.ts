@@ -1,15 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Item, StorageService } from 'src/app/storage/storage.service';
 
 @Component({
-  selector: 'app-folder-app',
+  selector: 'os-folder-app',
   templateUrl: './folder-app.component.html',
   styleUrls: ['./folder-app.component.css']
 })
-export class FolderAppComponent implements OnInit {
+export class FolderAppComponent implements OnChanges {
+  @Input() data: any;
+  @Input() parent: any;
 
-  constructor() { }
+  content: Observable<Item[]> | undefined;
 
-  ngOnInit(): void {
+  constructor(private storage: StorageService) {}
+
+  ngOnChanges(): void {
+    this.content = this.storage.getChildren(this.data.id);
   }
 
+  addItem(type: 'txt' | 'folder') {
+    this.storage.add({
+      parentId: this.data.id,
+      type,
+      name: `New ${type === 'txt' ? 'file.txt' : 'folder'}`,
+    });
+  }
 }

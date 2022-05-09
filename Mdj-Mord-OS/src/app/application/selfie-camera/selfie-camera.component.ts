@@ -4,9 +4,9 @@ import { ScreenService } from 'src/app/screen/screen.service';
 import { ItemTypes, StorageService } from 'src/app/storage/storage.service';
 
 @Component({
-  selector: 'app-selfie-camera',
+  selector: 'os-selfie-camera',
   templateUrl: './selfie-camera.component.html',
-  styleUrls: ['./selfie-camera.component.css']
+  styleUrls: ['./selfie-camera.component.scss']
 })
 export class SelfieCameraComponent implements OnInit {
   @Input() data: any;

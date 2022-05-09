@@ -6,11 +6,11 @@ import { OsIconComponent } from '../icon/os-icon/os-icon.component';
 import { ScreenComponent } from '../screen/screen.component';
 import { AngularDraggableModule } from 'angular2-draggable';
 import { ApplicationModule } from '../application/application.module';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
     HomeComponent,
-    OsIconComponent,
     ScreenComponent
   ],
   exports : [
@@ -20,7 +20,8 @@ import { ApplicationModule } from '../application/application.module';
     CommonModule,
     HomeRoutingModule,
     AngularDraggableModule,
-    ApplicationModule
+    ApplicationModule,
+    SharedModule
   ]
 })
 export class HomeModule { }

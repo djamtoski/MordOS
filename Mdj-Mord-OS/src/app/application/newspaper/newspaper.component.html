@@ -1,1 +1,7 @@
-<p>newspaper works!</p>
+<div class="newspaper">
+  <div class="newspaper__item" *ngFor="let item of news">
+    <div class="newspaper__title">{{ item.name }}</div>
+    <div class="newspaper__author">Author: {{ item.email }}</div>
+    <div class="newspaper__content">{{ item.body }}</div>
+  </div>
+</div>

@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './authentication/login';
 import { HomeModule } from './home/home.module';
+import { SharedModule } from './shared/shared.module';
 import { fakeBackendProvider } from './_helpers';
 
 @NgModule({
@@ -19,6 +20,7 @@ import { fakeBackendProvider } from './_helpers';
     ReactiveFormsModule,
     HomeModule,
     HttpClientModule,
+    SharedModule
   ],
   providers: [
     fakeBackendProvider

@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
+import { Observable } from 'rxjs';
+import { StorageService } from 'src/app/storage/storage.service';
 
 @Component({
   selector: 'app-my-photos',
   templateUrl: './my-photos.component.html',
-  styleUrls: ['./my-photos.component.css']
+  styleUrls: ['./my-photos.component.scss']
 })
-export class MyPhotosComponent implements OnInit {
+export class MyPhotosComponent implements OnChanges {
+  @Input() data: any;
+  @Input() parent: any;
 
-  constructor() { }
+  photos: Observable<any[]> | undefined;
 
-  ngOnInit(): void {
+  constructor(private storage: StorageService) {}
+
+  ngOnChanges(): void {
+    this.photos = this.storage.getChildren(this.data.id);
   }
-
 }

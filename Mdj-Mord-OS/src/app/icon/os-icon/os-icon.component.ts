@@ -12,7 +12,7 @@ export class OsIconComponent implements OnInit {
   @ViewChild('input')
   input!: ElementRef<HTMLInputElement>;
   @Input() data: any;
-  @Input() window: any;
+  @Input() display: any;
 
   renaming: boolean = false;
 
@@ -39,8 +39,8 @@ export class OsIconComponent implements OnInit {
   }
 
   open() {
-    if (this.data.type === 'folder' && this.window) {
-      this.screen.updateItemData(this.window, this.data.id);
+    if (this.data.type === 'folder' && this.display) {
+      this.screen.updateItemData(this.display, this.data.id);
     } else {
       this.screen.add({ title: this.data.name }, this.data.id);
     }

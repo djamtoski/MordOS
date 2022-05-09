@@ -1,1 +1,8 @@
-<p>folder-app works!</p>
+<div class="mo-folder">
+  <div class="mo-folder__actions m-1">
+    <button class="mo-btn mo-btn-primary" (click)="addItem('folder')">Add new folder</button>
+    <button class="mo-btn mo-btn-primary" (click)="addItem('txt')">Add new text file</button>
+  </div>
+  <os-icon *ngFor="let item of content | async" [data]="item" [display]="parent"></os-icon>
+  <div *ngIf="!(content | async)?.length" class="m-1 text-italic">No files/folders</div>
+</div>
