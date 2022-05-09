@@ -1,0 +1,17 @@
+<div
+  class="os-window"
+  (mousedown)="moveToTop()"
+  ngDraggable
+  [ngStyle]="{ top: position?.y + 'px', left: position?.x + 'px' }"
+>
+  <div class="os-window__header">
+    <div #handle class="os-window__title">
+      <a class="os-window__back" *ngIf="item?.parentId && item?.type === 'folder'" (click)="goBack()">&lsaquo;</a>
+      <div>{{ item?.name }}</div>
+    </div>
+    <a class="os-window__close" (click)="delete()">&times;</a>
+  </div>
+  <div class="os-window__content">
+    <application-wrapper *ngIf="item" [data]="item" [parent]="id"></application-wrapper>
+  </div>
+</div>

@@ -9,12 +9,12 @@ import { ItemTypes, StorageService } from 'src/app/storage/storage.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  rootItems: Observable<any> | undefined;
+  desktopIcons: Observable<any> | undefined;
 
   constructor(private auth: AuthenticationService, public storage : StorageService) {}
 
   ngOnInit(): void {
-    this.rootItems = this.storage.getRootItems();
+    this.desktopIcons = this.storage.getDefaultItems();
   }
 
   logout() {

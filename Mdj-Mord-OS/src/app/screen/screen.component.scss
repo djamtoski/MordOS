@@ -1,0 +1,57 @@
+@import '../../styles/settings/global-variables';
+
+.os-window {
+  position: fixed;
+  width: 640px;
+  height: 480px;
+  background: rgba($white, 0.5);
+  backdrop-filter: blur(10px);
+  color: $black;
+  box-shadow: 0 0 20px $black;
+  resize: both;
+  overflow: auto;
+  min-width: 360px;
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+
+  * {
+    color: $black;
+  }
+
+  &__header {
+    user-select: none;
+    cursor: grab;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $white;
+    border-bottom: 1px solid $light-gray;
+    width: 100%;
+    flex: 0;
+  }
+
+  &__title {
+    display: flex;
+    flex: 1;
+    padding: 0.5rem 1rem;
+  }
+
+  &__close {
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    cursor: pointer;
+  }
+
+  &__content {
+    flex: 1;
+    overflow: auto;
+  }
+
+  &__back {
+    font-size: 2rem;
+    line-height: 1rem;
+    padding-right: 1rem;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,12 @@
+.os-browser {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &__address {
+    flex: 0;
+  }
+  &__view {
+    flex: 1;
+  }
+}

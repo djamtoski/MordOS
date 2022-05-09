@@ -1,0 +1,4 @@
+<div class="os-browser">
+  <input class="os-browser__address" type="text" [(ngModel)]="address" />
+  <iframe class="os-browser__view" [src]="address | checkUrl"></iframe>
+</div>

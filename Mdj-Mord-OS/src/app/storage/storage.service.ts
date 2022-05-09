@@ -61,7 +61,7 @@ export class StorageService {
 
   constructor() {}
 
-  getRootItems() {
+  getDefaultItems() {
     return this.items.pipe(
       map((items) => {
         return items.filter(({ parentId }) => !parentId);

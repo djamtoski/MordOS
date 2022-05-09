@@ -1,6 +1,6 @@
 <button class="os-logout" (click)="logout()">🛑</button>
 <nav class="navMenu" style="display : inline-flex;">
-  <div *ngFor="let item of rootItems | async">
+  <div *ngFor="let item of desktopIcons | async">
     <os-icon [data]="item"></os-icon>
   </div>
   <div class="dot"></div>

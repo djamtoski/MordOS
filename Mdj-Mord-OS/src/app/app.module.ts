@@ -18,7 +18,7 @@ import { fakeBackendProvider } from './_helpers';
     AppRoutingModule,
     ReactiveFormsModule,
     HomeModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [
     fakeBackendProvider
