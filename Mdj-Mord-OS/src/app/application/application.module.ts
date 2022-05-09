@@ -6,7 +6,7 @@ import { WebcamModule } from 'ngx-webcam';
 import { SharedModule } from '../shared/shared.module';
 @NgModule({
   declarations: [
-    ...Application_Components
+    ...Application_Components,
   ],
   exports : [
     ...Application_Components

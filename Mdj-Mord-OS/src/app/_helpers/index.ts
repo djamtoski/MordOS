@@ -1,8 +1,8 @@
 ﻿import { ApplicationWrapperComponent } from '../application/application-wrapper/application-wrapper.component';
 import { FolderAppComponent } from '../application/folder-app/folder-app.component';
 import { GalleryAppComponent } from '../application/gallery-app/gallery-app.component';
-import { MyPhotosComponent } from '../application/my-photos/my-photos.component';
 import { NewspaperComponent } from '../application/newspaper/newspaper.component';
+import { PhotoViewerComponent } from '../application/photo-viewer/photo-viewer.component';
 import { SelfieCameraComponent } from '../application/selfie-camera/selfie-camera.component';
 import { TxtfileComponent } from '../application/txtfile/txtfile.component';
 import { CheckUrlPipe } from '../application/web-browser/check-url.pipe';
@@ -21,7 +21,7 @@ FolderAppComponent,
 GalleryAppComponent,
 NewspaperComponent,
 TxtfileComponent,
-MyPhotosComponent,
 ApplicationWrapperComponent,
 CheckUrlPipe,
+PhotoViewerComponent
 ]

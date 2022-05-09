@@ -1,1 +1,7 @@
-<p>txtfile works!</p>
+<div class="mo-txt">
+  <textarea class="mo-txt__textarea" [(ngModel)]="display"></textarea>
+  <div class="mo-txt__actions">
+    <button class="mo-btn mo-btn-secondary" (click)="close()">Cancel</button>
+    <button class="mo-btn mo-btn-primary" (click)="save()">Save</button>
+  </div>
+</div>

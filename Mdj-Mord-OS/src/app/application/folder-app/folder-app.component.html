@@ -1,8 +1,8 @@
-<div class="mo-folder">
-  <div class="mo-folder__actions m-1">
-    <button class="mo-btn mo-btn-primary" (click)="addItem('folder')">Add new folder</button>
-    <button class="mo-btn mo-btn-primary" (click)="addItem('txt')">Add new text file</button>
+<div class="os-folder">
+  <div style="margin: 0.5rem;" class="os-folder__actions m-1">
+    <button class="btn btn-light" (click)="addItem('folder')">Add new folder</button>
+    <button class="btn btn-light" (click)="addItem('txt')">Add new text file</button>
   </div>
   <os-icon *ngFor="let item of content | async" [data]="item" [display]="parent"></os-icon>
-  <div *ngIf="!(content | async)?.length" class="m-1 text-italic">No files/folders</div>
+  <div *ngIf="!(content | async)?.length" class="m-1 text-italic">Empty</div>
 </div>
