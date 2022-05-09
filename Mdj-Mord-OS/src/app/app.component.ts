@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScreenService } from './screen/screen.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Mdj-Mord-OS';
+
+  constructor(public screen: ScreenService) {}
 }

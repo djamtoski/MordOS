@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { CheckUrlPipe } from './web-browser/check-url.pipe';
 import { ApplicationWrapperComponent } from './application-wrapper/application-wrapper.component';
 import { Application_Components } from '../_helpers';
+import { WebcamModule } from 'ngx-webcam';
 
 
 
@@ -23,7 +24,8 @@ import { Application_Components } from '../_helpers';
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    WebcamModule
   ]
 })
 export class ApplicationModule { }

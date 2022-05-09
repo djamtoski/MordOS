@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class WebBrowserComponent implements OnInit {
   @Input() data: any;
-  address = 'https://github.com/mdjamtoski';
+  address = 'https://github.com/djamtoski';
   constructor() {}
 
   ngOnInit(): void {}

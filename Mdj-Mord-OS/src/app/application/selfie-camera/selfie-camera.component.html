@@ -1,1 +1,11 @@
-<p>selfie-camera works!</p>
+<div class="mo-camera" #camera>
+  <webcam
+    [width]="camera.clientWidth"
+    [height]="camera.clientHeight"
+    [trigger]="triggerObservable"
+    (imageCapture)="handleImage($event)"
+  ></webcam>
+  <div class="mo-camera__actions">
+    <button class="mo-btn mo-btn-primary" (click)="triggerSnapshot()">Take photo</button>
+  </div>
+</div>

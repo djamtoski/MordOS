@@ -1,17 +1,17 @@
 <div
-  class="os-window"
+  class="os-screen"
   (mousedown)="moveToTop()"
   ngDraggable
   [ngStyle]="{ top: position?.y + 'px', left: position?.x + 'px' }"
 >
-  <div class="os-window__header">
-    <div #handle class="os-window__title">
-      <a class="os-window__back" *ngIf="item?.parentId && item?.type === 'folder'" (click)="goBack()">&lsaquo;</a>
+  <div class="os-screen__header">
+    <div #handle class="os-screen__title">
+      <a class="os-screen__back" *ngIf="item?.parentId && item?.type === 'folder'" (click)="goBack()">&lsaquo;</a>
       <div>{{ item?.name }}</div>
     </div>
-    <a class="os-window__close" (click)="delete()">&times;</a>
+    <a class="os-screen__close" (click)="delete()">&times;</a>
   </div>
-  <div class="os-window__content">
+  <div class="os-screen__content">
     <application-wrapper *ngIf="item" [data]="item" [parent]="id"></application-wrapper>
   </div>
 </div>

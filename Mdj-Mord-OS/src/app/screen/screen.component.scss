@@ -1,13 +1,14 @@
 @import '../../styles/settings/global-variables';
 
-.os-window {
+.os-screen {
   position: fixed;
-  width: 640px;
-  height: 480px;
-  background: rgba($white, 0.5);
+  width: 840px;
+  height: 580px;
+  background: rgb(53, 47, 47);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  color: $black;
-  box-shadow: 0 0 20px $black;
+  color: #000000;
+  box-shadow: 0 0 20px #000000;
   resize: both;
   overflow: auto;
   min-width: 360px;
@@ -16,7 +17,7 @@
   flex-direction: column;
 
   * {
-    color: $black;
+    color: white;
   }
 
   &__header {
@@ -25,7 +26,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: $white;
+    background: rgb(53, 47, 47);
     border-bottom: 1px solid $light-gray;
     width: 100%;
     flex: 0;

@@ -1,4 +1,5 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { ScreenService } from 'src/app/screen/screen.service';
 import { StorageService } from 'src/app/storage/storage.service';
 
 @Component({
@@ -30,7 +31,7 @@ export class OsIconComponent implements OnInit {
 
   public icon = '⛓️';
 
-  constructor(private storage: StorageService) {}
+  constructor(private storage: StorageService, private screen : ScreenService) {}
 
   ngOnInit(): void {
     const type = this.data.type as keyof typeof this.icons;
@@ -39,9 +40,9 @@ export class OsIconComponent implements OnInit {
 
   open() {
     if (this.data.type === 'folder' && this.window) {
-      // this.windows.updateItemContent(this.window, this.data.id);
+      this.screen.updateItemData(this.window, this.data.id);
     } else {
-      // this.windows.add({ title: this.data.name }, this.data.id);
+      this.screen.add({ title: this.data.name }, this.data.id);
     }
   }
 

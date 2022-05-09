@@ -1,3 +1,9 @@
 <div class="background">
   <router-outlet></router-outlet>
 </div>
+
+<div class="os-windows">
+  <div *ngFor="let item of screen.items | async">
+    <os-screen [id]="item.id" [position]="item.position" [title]="item.title"></os-screen>
+  </div>
+</div>

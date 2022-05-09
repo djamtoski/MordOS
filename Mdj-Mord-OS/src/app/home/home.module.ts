@@ -13,6 +13,9 @@ import { ApplicationModule } from '../application/application.module';
     OsIconComponent,
     ScreenComponent
   ],
+  exports : [
+    ScreenComponent
+  ],
   imports: [
     CommonModule,
     HomeRoutingModule,

@@ -7,9 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ApplicationWrapperComponent implements OnInit {
   @Input() parent: any;
-  @Input() set data(value : any) {
-    console.log(value);
-  }
+  @Input() data : any;
 
   constructor() {}
 

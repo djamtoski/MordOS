@@ -4,7 +4,7 @@ import { StorageService } from '../storage/storage.service';
 import { ScreenService } from './screen.service';
 
 @Component({
-  selector: 'app-screen',
+  selector: 'os-screen',
   templateUrl: './screen.component.html',
   styleUrls: ['./screen.component.scss']
 })
